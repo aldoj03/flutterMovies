@@ -21,6 +21,8 @@ class Peliculas{
 }
 
 class Pelicula {
+
+  String uniqueId;
   double popularity;
   int voteCount;
   bool video;
@@ -77,6 +79,12 @@ class Pelicula {
     if(this.posterPath == null) return 'https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg';
 
     return 'https://image.tmdb.org/t/p/w500/$posterPath';
+  }
+  getBackgorund(){
+
+    if(this.posterPath == null) return 'https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg';
+
+    return 'https://image.tmdb.org/t/p/w500/$backdropPath';
   }
 }
 
