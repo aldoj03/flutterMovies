@@ -33,6 +33,12 @@ class PeliculasProvider {
    return await _makePeticion(url);
   }
 
+   Future<List<Pelicula>> getCinesSearch(query) async {
+    final url = Uri.https(_url, '3/search/movie',
+        {'api_key': _apiKey, 'language': _language, 'query': query});
+   return await _makePeticion(url);
+  }
+
 
 
   Future<List<Pelicula>> getPopulares() async {
